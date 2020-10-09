@@ -33,7 +33,7 @@ def set_servo_to_angle(s, angle):
 setup()
 
 for ss in servos:
-    s_range = ranges[ss]
+    s_range = range(ranges[ss][0], ranges[ss][1])
     for r in s_range:
         print(f'S [{ss}] angle -> {r}')
         set_servo_to_angle(ss, r)
