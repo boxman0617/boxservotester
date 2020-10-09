@@ -17,14 +17,15 @@ def set_all_to_angle(angle):
         kit.servo[s].angle = angle
 
 
+def set_servo_to_angle(s, angle):
+    kit.servo[s].angle = angle
+
+
 setup()
 
-set_all_to_angle(0)
+ranges = range(0, 160, 10)
 
-time.sleep(2)
-
-set_all_to_angle(160)
-
-time.sleep(2)
-
-set_all_to_angle(80)
+for s in servos:
+    for r in ranges:
+        set_servo_to_angle(s, r)
+        time.sleep(1)
