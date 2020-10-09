@@ -1,7 +1,7 @@
 import time
 from adafruit_servokit import ServoKit
 
-kit = ServoKit(channels=16, frequency=60)
+kit = ServoKit(channels=16)
 
 servos = [0, 1, 2]
 
