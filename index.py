@@ -37,5 +37,5 @@ def calibrate_servo(s):
 setup()
 
 for _s in servos:
-    set_servo_to_angle(_s, 0)
+    set_servo_to_angle(_s, 180)
     time.sleep(5)
