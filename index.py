@@ -26,14 +26,15 @@ def set_servo_to_angle(s, angle):
     kit.servo[s].angle = angle
 
 
+def calibrate_servo(s):
+    set_servo_to_angle(s, 0)
+    time.sleep(2)
+    set_servo_to_angle(s, 90)
+    time.sleep(2)
+    set_servo_to_angle(s, 180)
+
+
 setup()
 
-set_servo_to_angle(sz, 0)
-
-time.sleep(2)
-
-set_servo_to_angle(sz, 90)
-
-time.sleep(2)
-
-set_servo_to_angle(sz, 180)
+for _s in servos:
+    calibrate_servo(_s)
