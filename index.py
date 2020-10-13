@@ -34,7 +34,14 @@ def calibrate_servo(s):
     set_servo_to_angle(s, 180)
 
 
-setup()
+def point_up():
+    set_servo_to_angle(s0, 90)
+    time.sleep(0.5)
+    set_servo_to_angle(s1, 90)
+    time.sleep(0.5)
+    set_servo_to_angle(s2, 90)
 
-for _s in servos:
-    calibrate_servo(_s)
+
+setup()
+time.sleep(0.2)
+point_up()
