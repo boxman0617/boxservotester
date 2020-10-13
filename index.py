@@ -42,6 +42,18 @@ def point_up():
     set_servo_to_angle(s2, 90)
 
 
+def point_straight():
+    set_servo_to_angle(s0, 10)
+
+
+def point_back():
+    set_servo_to_angle(s0, 160)
+
+
 setup()
 time.sleep(0.2)
 point_up()
+time.sleep(0.5)
+point_straight()
+time.sleep(0.5)
+point_back()
