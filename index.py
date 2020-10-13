@@ -3,16 +3,12 @@ from adafruit_servokit import ServoKit
 
 kit = ServoKit(channels=16)
 
-sx = 0
-sy = 1
-sz = 2
-servos = [sx, sy, sz]
-
-ranges = [
-    [70, 180],  # x
-    [70, 120],  # y
-    [0, 180]    # z
-]
+sz = 0  # base
+s0 = 1
+s1 = 2
+s2 = 3
+sc = 4  # claw
+servos = [sz, s0, s1, s2, sc]
 
 
 def setup():
@@ -32,9 +28,12 @@ def set_servo_to_angle(s, angle):
 
 setup()
 
-for ss in servos:
-    s_range = range(ranges[ss][0], ranges[ss][1], 10)
-    for r in s_range:
-        print(f'S [{ss}] angle -> {r}')
-        set_servo_to_angle(ss, r)
-        time.sleep(1)
+set_servo_to_angle(sz, 0)
+
+time.sleep(2)
+
+set_servo_to_angle(sz, 90)
+
+time.sleep(2)
+
+set_servo_to_angle(sz, 180)
