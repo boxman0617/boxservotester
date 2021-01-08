@@ -91,6 +91,6 @@ set_all_to_angle(90)
 time.sleep(0.5)
 set_all_to_angle(180)
 time.sleep(0.5)
-set_all_to_angle(0)
+set_all_to_angle(90)
 
 time.sleep(1)
