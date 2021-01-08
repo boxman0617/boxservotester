@@ -86,3 +86,7 @@ setup()
 # point_back()
 
 set_all_to_angle(0)
+time.sleep(0.2)
+set_all_to_angle(90)
+time.sleep(0.2)
+set_all_to_angle(180)
