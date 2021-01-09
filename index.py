@@ -63,10 +63,12 @@ def point_back():
 
 
 def set_pan(angle):
+    print(f'Pan: {angle}')
     set_servo_to_angle(0, angle)
 
 
 def set_tilt(angle):
+    print(f'Tilt: {angle}')
     set_servo_to_angle(1, angle)
 
 
