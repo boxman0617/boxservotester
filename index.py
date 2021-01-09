@@ -96,6 +96,6 @@ setup()
 
 set_pan(0)
 time.sleep(1)
-set_tilt(0)
+set_tilt(90)
 
 time.sleep(1)
