@@ -96,18 +96,12 @@ setup()
 # point_back()
 
 
-set_pan(0)
-time.sleep(4)
-set_tilt(90)
-time.sleep(4)
-set_tilt(50)
-time.sleep(4)
-set_tilt(180)
-set_pan(45)
-time.sleep(4)
-set_pan(90)
-time.sleep(4)
-set_pan(135)
-time.sleep(4)
-set_pan(180)
-time.sleep(4)
+steps = [0, 45, 90, 135, 180]
+
+for step in steps:
+    set_pan(step)
+    time.sleep(3)
+
+for step in steps:
+    set_tilt(step)
+    time.sleep(3)
