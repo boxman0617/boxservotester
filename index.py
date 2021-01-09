@@ -62,6 +62,14 @@ def point_back():
     set_servo_to_angle(s0, 160)
 
 
+def set_pan(angle):
+    set_servo_to_angle(0, angle)
+
+
+def set_tilt(angle):
+    set_servo_to_angle(1, angle)
+
+
 class Arm:
     _base = 0
     _s = [0, 0, 0]
@@ -85,12 +93,9 @@ setup()
 # time.sleep(0.5)
 # point_back()
 
-set_all_to_angle(0)
-time.sleep(0.5)
-set_all_to_angle(90)
-time.sleep(0.5)
-set_all_to_angle(180)
-time.sleep(0.5)
-set_all_to_angle(90)
+
+set_pan(0)
+time.sleep(1)
+set_tilt(0)
 
 time.sleep(1)
